@@ -1,0 +1,561 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variabili */
+
+:root{
+    --dark-color: #333333;
+    --header-color: #0084FD;
+    --menu-color: #3ea1fd;
+    --light-color: #FFFFFF;
+    --primary-color: #9792E4;
+    --card-bg-color: #B5DDFF;
+    --contrast-color: #FDC15F;
+}
+
+/* General */
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+main section:nth-child(even){
+    background-color: var(--primary-color);
+}
+.container{
+    padding: 3.5rem 2rem 4.5rem 2rem;
+}
+ul{
+    list-style: none;
+}
+
+/* Titles */
+
+h3{
+    font-size: 1.5rem;
+    padding-bottom: 1.8rem;
+}
+h2{
+    font-size: 1.8rem;
+    padding: 5rem 0 2.8rem 0;
+}
+
+/* Borders */
+
+.small-bord-rad{
+    border-radius: 20px;
+}
+.large-bord-rad{
+    border-radius: 40px;
+}
+
+/* Text properties */
+
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-contrast{
+    color: var(--contrast-color);
+    font-weight: bold;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.italic{
+    font-style: italic;
+}
+.line-height-1-8{
+    line-height: 1.8;
+}
+.bold{
+    font-weight: bold;
+}
+.regular{
+    font-weight: 500;
+}
+
+/* Font-sizes */
+
+.fs-h3{
+    font-size: 1.5rem;
+}
+.fs-h2{
+    font-size: 1.8rem;
+}
+.fs-h2-0-2{
+    font-size: 2rem;
+}
+.fs-h2-1{
+    font-size: 2.8rem;
+}
+.fs-h2-2{
+    font-size: 3.8rem;
+}
+.fs-h2-3{
+    font-size: 4.8rem;
+}
+
+/* Paragraphs */
+
+.par-default{
+    font-size: 1rem;
+}
+.par-1{
+    font-size: 1.10rem;
+}
+.par-3{
+    font-size: 1.30rem;
+}
+
+/* Buttons */
+
+.btn{
+    font-size: 1rem;
+    padding: 0.6rem 3rem;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: all var(--trans-btn) linear;
+    cursor: pointer;
+}
+.btn i{
+    margin-right: 0.5rem;
+}
+.btn-blue{
+    color: var(--light-color);
+    background-color: var(--header-color);
+    letter-spacing: .1rem;
+    margin: 1.8rem 0 1.8rem 0;
+    font-weight: bold;
+}
+.btn-white{
+    font-size: 1.10rem;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 0.4rem 1rem;
+}
+.btn-purple{
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 0.6rem 2.8rem;
+}
+.btn-no-spacing{
+    letter-spacing: 0;
+}
+.btn-hor-padd-small{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Background colors */
+
+.bg-header-color{
+    background-color: var(--header-color);
+}
+.bg-dark-color{
+    background-color: var(--dark-color);
+}
+.bg-light-color{
+    background-color: var(--light-color);
+}
+.bg-primary-color{
+    background-color: var(--primary-color);
+}
+
+/* Txt colors */
+
+.txt-dark-color{
+    color: var(--dark-color);
+}
+.txt-header-color{
+    color: var(--header-color);
+}
+.txt-light-color{
+    color: var(--light-color);
+}
+.txt-primary-color{
+    color: var(--primary-color);
+}
+
+/* Header */
+
+header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .hamburger-menu ul{
+    display: none;
+}
+header nav .hamburger-menu, header nav a, header nav a:visited{
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+header .container{
+    padding-top: 1rem;
+}
+
+/* Main general*/
+main{
+    margin-top: 80px;
+}
+
+/* Intro */
+
+.card{
+    width: 100%;
+    background-color: var(--card-bg-color);
+    margin-bottom: 1.5rem;
+    padding: 2.5rem 1.8rem;
+}
+.card:first-child{
+    padding-bottom: 0;
+}
+.card-left-txt, .card-right-img, .card-right-img img{
+    width: 100%;
+}
+.card:first-child p{
+    text-align: left;
+}
+.card p{
+    opacity: 70%;
+}
+.card:first-child img{
+    margin-bottom: -4px;
+    max-width: 250px;
+}
+.card-icon{
+    font-size: 5rem;
+    margin-bottom: 1.8rem;
+}
+
+/* Planning */
+
+#planning img{
+    width: 100%;
+}
+#planning #appDevelopment{
+    margin: 1.8rem 0 0 0;
+    padding: 1rem 1rem;
+}
+#planning #appDevelopment h3{
+    margin: 1.4rem 0;
+}
+#planning #appDevelopment a, #planning #appDevelopment a:visited{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-top: 12px;
+    margin: 2.5rem 0 1rem 0;
+    text-decoration: none;
+}
+
+/* Testimonials */
+
+.testimonial{
+    min-width: 294px;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    margin-bottom: 2rem;
+}
+.testimonial-photo{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.testimonial-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.testimonial-info .testimonial-description{
+    padding: 1.3rem 0 1.8rem 0;
+}
+#testimonials h2{
+    padding: 2rem 0;
+}
+#testimonials .init-description{
+    padding: 0 0.5rem 3rem 0.5rem;
+}
+
+/* Features */
+
+#features .benefit{
+    padding: 2.5rem 2rem 2rem 2rem;
+    margin-bottom: 2rem;
+}
+#features h2{
+    padding: 1rem 1rem 4rem 1rem;
+}
+.benefit h3{
+    margin-top: 1.5rem;
+}
+.benefit p{
+    margin-bottom: 1.5rem;
+}
+.benefit .number{
+    font-size: 3rem;
+}
+
+/* About us */
+
+#about-us .testimonial-photo{
+    position: relative;
+}
+#about-us .testimonial-photo i{
+    font-size: 5rem;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+}
+#about-us h3{
+    font-size: 1.6rem;
+}
+#about-us p{
+    margin-bottom: 3rem;
+}
+#about-us h2{
+    padding: 1rem 1rem 2rem 0;
+}
+#about-us .testimonial-photo{
+    width: 180px;
+    height: 180px;
+    margin: 0 0 2rem 0;
+}
+
+/* Get Started*/
+
+#call-to-action .category{
+    opacity: 60%;
+}
+#call-to-action .mot{
+    padding: 1.8rem 1rem;
+}
+#call-to-action .content{
+    padding: 1.8rem 0;
+}
+#call-to-action button{
+    letter-spacing: .1rem;
+    padding: 1rem 3rem;
+    border-radius: 40px;
+}
+#call-to-action .copyright{
+    padding-top: 2rem;
+}
+#call-to-action .dot{
+    font-size: 5px;
+    line-height: 15px;
+    margin: 0 10px;
+}
+
+/* Footer */
+
+footer .container{
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+footer .container .textContainer{
+    max-width: 450px;
+    padding: 0 1rem;
+}
+footer .container .textContainer p:first-child{
+    margin-bottom: 4rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1199px){
+    header nav .hamburger-menu:hover ul{
+        display: block;
+        position: fixed;
+        top: 50px;
+        right: 0;
+        background-color: var(--menu-color);
+        padding: 0.5rem;
+        box-shadow: 0 0 5px #888888;
+        margin-right: 0.5rem;
+    }
+    header nav .hamburger-menu ul li a{
+        display: inline-block;
+        width: 200px;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border: 2px solid transparent;
+        transition: all linear;
+    }
+    header nav .hamburger-menu:hover li:last-child{
+        display: none;
+    }
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px){
+    .d-flex{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1.5rem;
+    }
+    .d-f-content-center{
+        justify-content: center;
+    }
+    .d-f-column{
+        flex-flow: column wrap;
+    }
+    .d-f-align-center{
+        align-items: center;
+    }
+    .d-f-align-flex-end{
+        align-items: flex-end;
+    }
+    .gap-5rem{
+        gap: 5rem;
+    }
+    .card{
+        width: calc(100% / 3 - 1rem);
+    }
+    #intro .card:first-child{
+        width: calc((100% / 3) * 2 - 1rem);
+        display: flex;
+    }
+    .card:first-child img{
+        float: left;
+    }
+    #planning #appDevelopment{
+        padding: 2rem 3rem;
+    }
+    .benefits.d-flex{
+        gap: 2rem;
+    }
+    .benefit{
+        width: calc(100% / 2 - 1.5rem);
+    }
+    .testimonial{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .testimonial-photo{
+        margin: 0;
+    }
+    .testimonial-info{
+        width: calc(100% - 200px - 5rem);
+        text-align: left;
+    }
+    #about-us .left-info{
+        width: calc(100% - 400px - 5rem);
+    }
+    #about-us .right-info{
+        width: 230px;
+    }
+    #about-us .testimonial-photo{
+        width: 230px;
+        height: 230px;
+    }
+    #call-to-action .mot{
+        font-size: 2.8rem;
+    }
+    #call-to-action .text-contrast{
+        font-size: 4.8rem;
+    }
+    #call-to-action .content{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    #call-to-action button{
+        padding: 1.5rem 5rem;
+        border-radius: 50px;
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 992px){
+    #intro .card:first-child{
+        flex-flow: column wrap;
+    }
+    #planning{
+        min-height: 100vh;
+        padding-top: 5rem;
+    }
+    #planning .leftContent, #planning .rightContent{
+        width: calc(100% / 2 - 1rem);
+        max-width: 500px;
+    }
+    #planning #appDevelopment{
+        max-height: 650px;
+        margin-left: 4rem;
+    }
+    #planning #appDevelopment img{
+        width: 80%;
+    }
+    .benefit{
+        width: calc(100% / 3 - 1.5rem);
+    }
+}
+
+/* LARGE DESKTOP */
+
+@media screen and (min-width: 1200px){
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    header .container{
+        padding: 1rem 3rem;
+    }
+    header .container>img{
+        margin-left: -1rem;
+    }
+    header nav .hamburger-menu i{
+        display: none;
+    }
+    header nav .hamburger-menu ul{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 2rem;
+    }
+    header nav .hamburger-menu ul li{
+        border-bottom: 3px solid transparent;
+        padding-bottom: 5px;
+    }
+    header nav .hamburger-menu{
+        font-size: calc(1.5rem - 0.3rem);
+    }
+    #intro .card:first-child{
+        flex-flow: row wrap;
+    }
+    .card-left-txt, .card-right-img{
+        width: calc(100% / 2 - 1rem);
+    }
+    .card-right-img{
+        position: relative;
+    }
+    .card-right-img img{
+        position: absolute;
+        bottom: 0;
+        left: 4rem;
+    }
+}
